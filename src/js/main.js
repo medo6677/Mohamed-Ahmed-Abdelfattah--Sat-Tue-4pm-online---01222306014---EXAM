@@ -205,7 +205,7 @@ areasGrid?.addEventListener("click", async (e) => {
   showRecipesLoading();
 
   const areaName = btn.dataset.area;
-  if (!areaName) {
+  if (!areaName || areaName === "all") {
     const meals = await fetchMeals();
     currentMealsList = meals || [];
     displayMeals(currentMealsList, currentViewMode);

@@ -54,7 +54,7 @@ export function displayMeals(list, viewMode = "grid") {
             <span class="px-2 py-1 bg-white/90 backdrop-blur-sm text-xs font-semibold rounded-lg text-gray-700">
               <i class="fa-solid fa-tag text-emerald-600 mr-1"></i>${category}
             </span>
-            <span class="px-2 py-1 bg-white/90 backdrop-blur-sm text-xs font-semibold rounded-lg text-gray-700">
+            <span class="px-2 py-1 bg-white/90 backdrop-blur-sm text-xs font-semibold rounded-lg text-gray-700 ${!area ? "hidden" : ""} ">
               <i class="fa-solid fa-globe text-blue-600 mr-1"></i>${area}
             </span>
           </div>
@@ -70,8 +70,8 @@ export function displayMeals(list, viewMode = "grid") {
             <span class="font-semibold text-gray-900">
               <i class="fa-solid fa-utensils text-emerald-600 mr-1"></i>${category}
             </span>
-            <span class="font-semibold text-gray-500">
-              <i class="fa-solid fa-globe text-blue-500 mr-1"></i>${area}
+            <span class="font-semibold text-gray-500 ">
+              <i class="fa-solid fa-globe text-blue-500 mr-1"></i>${!area ? area : "International"}
             </span>
           </div>
         </div>
